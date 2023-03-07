@@ -30,7 +30,7 @@ def test_run(runner, tmpdir):
             ),
             text=CoordinatorPOSTResponse(self="", id="1").json(),
         )
-        m.get("http://127.0.0.1:8000/api/v1", text="")
+        m.get(f"http://127.0.0.1:{settings.BEFLOW_GATEWAY_PORT}/api/v1", text="")
         m.get(
             (
                 f"http://127.0.0.1:"
